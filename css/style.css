@@ -1,65 +1,110 @@
-body {
-    margin: 0;
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    background-color: #ffffff;
-    color: #f6f7f8;
-    text-align: center;
-}
+/* Base */
 html, body {
   height: 100%;
   margin: 0;
+}
+
+body {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background-color: #ffffff;         /* light theme */
+  color: #1e2430;                    /* dark text for readability */
+  text-align: center;
 }
 
-main {
-  flex: 1; /* pushes the footer down when content is short */
-}
+/* Main grows to push footer down */
+main { flex: 1; }
 
+/* Cover image */
 header img {
-    width: 80%;
-    height: 60%;
-    display: block;
-    max-height: 30vh;
-    max-width: 1200px;
-    object-fit: cover;
-    margin: 60px auto;
+  width: 90%;
+  max-width: 1200px;
+  height: auto;                      /* keep natural aspect ratio */
+  max-height: 30vh;                  /* tame very tall images */
+  object-fit: cover;
+  display: block;
+  margin: 48px auto 24px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
 }
+
+/* Greeting */
 h1 {
-    font-size: 3.0rem;
-    margin: 60px 0 10px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    color: #003060;
+  font-size: 3rem;
+  margin: 24px 0 6px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #003060;                    /* brand blue */
 }
-nav {
-    margin-top: 14px;
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    flex-wrap: wrap;
+
+/* Brand fonts */
+.noto-serif-sinhala-welcome {
+  font-family: "Noto Serif Sinhala", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
-.icon {
-    width: 36px;
-    height: 36px;
-    fill: #f6f7f8;
-    opacity: 0.85;
-    transition: transform 0.15s ease, opacity 0.15s ease;
+.noto-sans-tamil-welcome {
+  font-family: "Noto Sans Tamil", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
-a:hover .icon {
-    transform: translateY(-2px);
-    opacity: 1;
+
+/* Social icons row */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 28px;
+  flex-wrap: wrap;
 }
+
+.social-icons__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;                       /* comfy tap size */
+  height: 48px;
+  color: #003060;                    /* icon color via currentColor */
+  border: 1px solid rgba(0, 48, 96, .15);
+  border-radius: 12px;
+  transition: transform .15s ease, border-color .15s ease, opacity .15s ease, color .15s ease;
+  text-decoration: none;
+  opacity: .92;
+}
+
+.social-icons__link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 48, 96, .3);
+  opacity: 1;
+  color: #055c9d;
+}
+
+.social-icons__link svg {
+  width: 30px;
+  height: 3dvh;
+}
+
+/* (If you still use .icon somewhere else) */
+.icon { width: 24px; height: 24px; fill: currentColor; opacity: .88; transition: transform .15s ease, opacity .15s ease; }
+a:hover .icon { transform: translateY(-2px); opacity: 1; }
+
+/* Footer */
 footer {
-    margin: 60px 0 20px;
-    font-size: 1rem;
-    color: #055c9d;
-    text-align: center;
-    font-weight: bold;
+  margin: 36px 0 20px;
+  font-size: 1rem;
+  color: #055c9d;
+  text-align: center;
+  font-weight: 600;
 }
 
 footer .heart {
-  color: #ff4b5c;                 /* brighter, warmer red */
+  color: #ff4b5c;
   display: inline-block;
   animation: pulse 1.2s infinite ease-in-out;
   transform-origin: center;
@@ -72,58 +117,59 @@ footer .heart {
     filter: drop-shadow(0 0 4px rgba(255, 75, 92, 0.6));
   }
   50% {
-    transform: scale(1.2);        /* larger pulse */
+    transform: scale(1.2);
     opacity: 0.9;
     filter: drop-shadow(0 0 8px rgba(255, 75, 92, 0.9));
   }
 }
 
-.noto-serif-sinhala-welcome {
-    font-family: "Noto Serif Sinhala", serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
-.noto-sans-tamil-welcome {
-    font-family: "Noto Sans Tamil", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  header img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 16vh;
+    margin: 16px auto 10px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.08);
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+    margin: 10px 12px 6px;      /* ↓ top gap above greeting */
+  }
+
+  .social-icons {
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .social-icons__link {
+    width: 52px;
+    height: 52px;
+  }
+
+  .social-icons__link svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  footer {
+    font-size: .92rem;
+    margin: 24px 0 16px;
+  }
 }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;               /* space between icons */
-    margin-top: 60px;
-    flex-wrap: wrap;
+@media (min-width: 641px) and (max-width: 1024px) {
+  header img {
+    width: 94%;
+    max-width: 1000px;
+    max-height: 30vh;
+  }
+  h1 { font-size: 2.2rem; }
 }
 
-.social-icons__link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    color: #003060;          /* icon color (via currentColor) */
-    border: 1px solid rgba(255,255,255,.18);
-    border-radius: 12px;
-    transition: transform .15s ease, border-color .15s ease, opacity .15s ease;
-    text-decoration: none;
-    opacity: .92;
-}
-
-.social-icons__link:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255,255,255,.32);
-    opacity: 1;
-    color: #055c9d;
-}
-
-.social-icons__link svg {
-    width: 60px;
-    height: 60px;
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .heart { animation: none !important; }
 }
