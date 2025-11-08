@@ -18,13 +18,12 @@ main {
 
 header img {
     width: 80%;
-    height: auto;
+    height: 60%;
     display: block;
     max-height: 30vh;
     max-width: 1200px;
     object-fit: cover;
-    margin: 0 auto;
-    
+    margin: 60px auto;
 }
 h1 {
     font-size: 3.0rem;
