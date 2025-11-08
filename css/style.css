@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    background-color: #ffffff;
+    color: #f6f7f8;
+    text-align: center;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* pushes the footer down when content is short */
+}
+
+header img {
+    width: 80%;
+    height: auto;
+    display: block;
+    max-height: 30vh;
+    max-width: 1200px;
+    object-fit: cover;
+    margin: 0 auto;
+    
+}
+h1 {
+    font-size: 3.0rem;
+    margin: 60px 0 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #003060;
+}
+nav {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+.icon {
+    width: 36px;
+    height: 36px;
+    fill: #f6f7f8;
+    opacity: 0.85;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+a:hover .icon {
+    transform: translateY(-2px);
+    opacity: 1;
+}
+footer {
+    margin: 60px 0 20px;
+    font-size: 1rem;
+    color: #055c9d;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer .heart {
+  color: #ff4b5c;                 /* brighter, warmer red */
+  display: inline-block;
+  animation: pulse 1.2s infinite ease-in-out;
+  transform-origin: center;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 0 4px rgba(255, 75, 92, 0.6));
+  }
+  50% {
+    transform: scale(1.2);        /* larger pulse */
+    opacity: 0.9;
+    filter: drop-shadow(0 0 8px rgba(255, 75, 92, 0.9));
+  }
+}
+
+.noto-serif-sinhala-welcome {
+    font-family: "Noto Serif Sinhala", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+.noto-sans-tamil-welcome {
+    font-family: "Noto Sans Tamil", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;               /* space between icons */
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.social-icons__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: #003060;          /* icon color (via currentColor) */
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 12px;
+    transition: transform .15s ease, border-color .15s ease, opacity .15s ease;
+    text-decoration: none;
+    opacity: .92;
+}
+
+.social-icons__link:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255,255,255,.32);
+    opacity: 1;
+    color: #055c9d;
+}
+
+.social-icons__link svg {
+    width: 60px;
+    height: 60px;
+}
