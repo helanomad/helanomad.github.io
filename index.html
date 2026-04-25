@@ -8,6 +8,11 @@
   <meta name="description"
     content="Hela Nomad explores Sri Lankan heritage, history, language, and landscapes through documentaries, essays, and digital tools." />
   <link rel="icon" href="/favicon.ico" />
+  <link rel="canonical" href="https://helanomad.com/" />
+  <meta name="theme-color" content="#001326">
+
+  <!-- Preload hero banner for faster LCP -->
+  <link rel="preload" as="image" href="/images/cover.png">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -17,16 +22,18 @@
   <meta property="og:description"
     content="Hela Nomad explores Sri Lankan heritage, history, language, and landscapes through documentaries, essays, and digital tools.">
   <meta property="og:image" content="https://helanomad.com/images/logo.png">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
 
   <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:url" content="https://helanomad.com/">
   <meta name="twitter:title" content="Hela Nomad | In Search of Helese">
   <meta name="twitter:description"
     content="Hela Nomad explores Sri Lankan heritage, history, language, and landscapes through documentaries, essays, and digital tools.">
   <meta name="twitter:image" content="https://helanomad.com/images/logo.png">
 
-  <!-- Optional: Google Font -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -49,16 +56,21 @@
     <header class="nav">
       <div class="nav-inner">
         <div class="nav-left">
-          <div class="nav-brand">HELA NOMAD</div>
+          <a class="nav-brand" href="/">HELA NOMAD</a>
           <div class="nav-tagline">In Search of Helese</div>
         </div>
-        <nav class="nav-links">
+        <button class="nav-burger" id="navBurger" aria-label="Toggle navigation" aria-expanded="false"
+          aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links" id="navLinks" aria-label="Main navigation">
           <a href="#themes">Themes</a>
           <a href="#watch">Watch</a>
           <a href="#read">Read</a>
           <a href="#labs">Labs</a>
           <a href="#about">About</a>
-          <a class="nav-cta" href="https://www.youtube.com/@HelaNomad" target="_blank">YouTube ↗</a>
+          <a class="nav-cta" href="https://www.youtube.com/@HelaNomad" target="_blank" rel="noopener noreferrer">YouTube
+            ↗</a>
         </nav>
       </div>
     </header>
@@ -81,7 +93,8 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#themes">Explore Themes</a>
-            <a class="btn btn-soft" href="https://www.youtube.com/@HelaNomad" target="_blank">Watch on YouTube ↗</a>
+            <a class="btn btn-soft" href="https://www.youtube.com/@HelaNomad" target="_blank"
+              rel="noopener noreferrer">Watch on YouTube ↗</a>
           </div>
         </div>
 
@@ -107,7 +120,7 @@
 
         <div class="tiles">
 
-          <a href="https://www.youtube.com/playlist?list=PLY9sArsEZlCdf5WeLQj14dBjaZb_Y1a5a" target="_blank"
+          <a href="https://www.youtube.com/playlist?list=PLY9sArsEZlCdf5WeLQj14dBjaZb_Y1a5a" target="_blank" rel="noopener noreferrer"
             class="tile">
             <div class="tile-kicker">01 • Scripts & Inscriptions</div>
             <div class="tile-title">Writing, Stone & Identity</div>
@@ -118,7 +131,7 @@
             <div class="tile-footer">Documentaries, articles, and upcoming script-focused tools.</div>
           </a>
 
-          <a href="https://www.youtube.com/playlist?list=PLY9sArsEZlCcQ3md4zYcu6-LLZvSjpUKl" target="_blank"
+          <a href="https://www.youtube.com/playlist?list=PLY9sArsEZlCcQ3md4zYcu6-LLZvSjpUKl" target="_blank" rel="noopener noreferrer"
             class="tile">
             <div class="tile-kicker">02 • Water & Engineering</div>
             <div class="tile-title">Hydraulic & Metal Worlds</div>
@@ -129,7 +142,7 @@
             <div class="tile-footer">Engineering explainers and deep-dive visual essays.</div>
           </a>
 
-          <a href="https://www.youtube.com/playlist?list=PLY9sArsEZlCfsNDZzqbLG7iG6yKQMQ6fC" target="_blank"
+          <a href="https://www.youtube.com/playlist?list=PLY9sArsEZlCfsNDZzqbLG7iG6yKQMQ6fC" target="_blank" rel="noopener noreferrer"
             class="tile">
             <div class="tile-kicker">03 • Texts & Traditions</div>
             <div class="tile-title">Words That Shape a Civilization</div>
@@ -140,7 +153,7 @@
             <div class="tile-footer">Long-form explainers, glossaries, and reading guides.</div>
           </a>
 
-          <a href="https://www.youtube.com/playlist?list=PLY9sArsEZlCeUDcr3gJYM-VSVa287Hx4X" target="_blank"
+          <a href="https://www.youtube.com/playlist?list=PLY9sArsEZlCeUDcr3gJYM-VSVa287Hx4X" target="_blank" rel="noopener noreferrer"
             class="tile">
             <div class="tile-kicker">04 • Journeys & Places</div>
             <div class="tile-title">Travelling Through History</div>
@@ -151,7 +164,7 @@
             <div class="tile-footer">Travel narratives layered with archaeology.</div>
           </a>
 
-          <a href="https://www.youtube.com/playlist?list=PLY9sArsEZlCf8rGb2Oi_XIEPqArAcvlBC" target="_blank"
+          <a href="https://www.youtube.com/playlist?list=PLY9sArsEZlCf8rGb2Oi_XIEPqArAcvlBC" target="_blank" rel="noopener noreferrer"
             class="tile">
             <div class="tile-kicker">05 • Empires & Encounters</div>
             <div class="tile-title">Clashes, Memory & Power</div>
@@ -174,8 +187,13 @@
 
         <div class="list">
 
-          <a href="https://www.youtube.com/watch?v=ueUsboxOrSo" target="_blank" class="list-link">
+          <a href="https://www.youtube.com/watch?v=ueUsboxOrSo" target="_blank" rel="noopener noreferrer"
+            class="list-link">
             <div class="list-item">
+              <div class="list-thumb-wrap">
+                <img src="https://img.youtube.com/vi/ueUsboxOrSo/mqdefault.jpg"
+                  alt="Sri Lanka: The Guardian of Theravāda Buddhism" class="list-thumb" loading="lazy">
+              </div>
               <div class="list-item-title">Sri Lanka: The Guardian of Theravāda Buddhism</div>
               <p class="muted">
                 A long-form exploration of Sri Lanka’s role in preserving and transmitting Theravāda Buddhism
@@ -184,8 +202,13 @@
             </div>
           </a>
 
-          <a href="https://www.youtube.com/watch?v=YcHhkiIrNqQ" target="_blank" class="list-link">
+          <a href="https://www.youtube.com/watch?v=YcHhkiIrNqQ" target="_blank" rel="noopener noreferrer"
+            class="list-link">
             <div class="list-item">
+              <div class="list-thumb-wrap">
+                <img src="https://img.youtube.com/vi/YcHhkiIrNqQ/mqdefault.jpg"
+                  alt="The Ancient Irrigation Genius of Sri Lanka" class="list-thumb" loading="lazy">
+              </div>
               <div class="list-item-title">The Ancient Irrigation Genius of Sri Lanka</div>
               <p class="muted">
                 Tanks as inland seas, cascading reservoirs, and engineering that still challenges modern projects.
@@ -193,8 +216,13 @@
             </div>
           </a>
 
-          <a href="https://www.youtube.com/watch?v=qcGLAKXfl8g" target="_blank" class="list-link">
+          <a href="https://www.youtube.com/watch?v=qcGLAKXfl8g" target="_blank" rel="noopener noreferrer"
+            class="list-link">
             <div class="list-item">
+              <div class="list-thumb-wrap">
+                <img src="https://img.youtube.com/vi/qcGLAKXfl8g/mqdefault.jpg"
+                  alt="The Forgotten Steel: Sri Lanka's Ancient Iron Industry" class="list-thumb" loading="lazy">
+              </div>
               <div class="list-item-title">The Forgotten Steel: Sri Lanka’s Ancient Iron Industry</div>
               <p class="muted">
                 Wind-powered furnaces and high-carbon steel that travelled far beyond the island’s shores.
@@ -206,7 +234,8 @@
 
         <p class="mt-1 text-small">
           More videos and full playlists at
-          <a href="https://www.youtube.com/@HelaNomad" target="_blank">youtube.com/@HelaNomad ↗</a>
+          <a href="https://www.youtube.com/@HelaNomad" target="_blank" rel="noopener noreferrer">youtube.com/@HelaNomad
+            ↗</a>
         </p>
       </section>
 
@@ -220,7 +249,7 @@
         <div class="list">
 
           <a href="https://medium.com/@helanomad/understanding-the-word-eelam-beyond-politics-4a45b6a8f083"
-            target="_blank" class="list-link">
+            target="_blank" rel="noopener noreferrer" class="list-link">
             <div class="list-item">
               <div class="list-item-title">Understanding the Word “Eelam” — Beyond Politics</div>
               <p class="muted">
@@ -231,7 +260,7 @@
           </a>
 
           <a href="https://medium.com/@helanomad/in-search-of-helese-the-story-behind-hela-nomad-50a0b371d38f"
-            target="_blank" class="list-link">
+            target="_blank" rel="noopener noreferrer" class="list-link">
             <div class="list-item">
               <div class="list-item-title">In Search of Helese: The Story Behind Hela Nomad</div>
               <p class="muted">
@@ -241,7 +270,7 @@
             </div>
           </a>
 
-          <a href="https://medium.com/@helanomad" target="_blank" class="list-link">
+          <a href="https://medium.com/@helanomad" target="_blank" rel="noopener noreferrer" class="list-link">
             <div class="list-item">
               <div class="list-item-title">Ongoing Notes & Drafts</div>
               <p class="muted">
@@ -255,7 +284,7 @@
 
         <p class="mt-1 text-small">
           Selected essays are published on
-          <a href="https://medium.com/@helanomad" target="_blank">Medium ↗</a>.
+          <a href="https://medium.com/@helanomad" target="_blank" rel="noopener noreferrer">Medium ↗</a>.
         </p>
       </section>
 
@@ -278,8 +307,9 @@
               Current focus: Indic Script Explorer (early preview).
             </p>
             <div class="labs-actions mt-09">
-              <!-- <a class="btn btn-primary" href="https://labs.helanomad.com" target="_blank">Open Labs ↗</a> -->
-              <a class="btn btn-primary" href="https://helanomad.com/indic-script-explorer" target="_blank">
+              <!-- <a class="btn btn-primary" href="https://labs.helanomad.com" target="_blank" rel="noopener noreferrer">Open Labs ↗</a> -->
+              <a class="btn btn-primary" href="https://helanomad.com/indic-script-explorer/" target="_blank"
+                rel="noopener noreferrer">
                 Indic Script Explorer ↗
               </a>
             </div>
@@ -376,8 +406,10 @@
               <img src="/images/logo.png" alt="Hela Nomad Logo" class="about-logo" />
             </div>
 
-            <p class="mt-06 text-xs" style="margin-top:0.8rem;">
-              For collaboration or research questions, feel free to reach out via Instagram or Facebook.
+            <p class="mt-06 text-xs">
+              For collaboration, research questions, or media enquiries, reach out via
+              <a href="https://www.instagram.com/helanomad" target="_blank" rel="noopener noreferrer">Instagram</a>
+              or <a href="https://www.facebook.com/helanomad" target="_blank" rel="noopener noreferrer">Facebook</a>.
             </p>
           </div>
 
@@ -401,6 +433,19 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const burger = document.getElementById("navBurger");
+    const navLinks = document.getElementById("navLinks");
+    burger.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("is-open");
+      burger.setAttribute("aria-expanded", open);
+    });
+    navLinks.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        navLinks.classList.remove("is-open");
+        burger.setAttribute("aria-expanded", "false");
+      });
+    });
   </script>
 </body>
 
