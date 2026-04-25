@@ -441,9 +441,13 @@
       burger.setAttribute("aria-expanded", open);
     });
     navLinks.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => {
+      a.addEventListener("click", (e) => {
+        if (!navLinks.classList.contains("is-open")) return;
+        e.preventDefault();
+        const href = a.getAttribute("href");
         navLinks.classList.remove("is-open");
         burger.setAttribute("aria-expanded", "false");
+        setTimeout(() => { window.location.hash = href; }, 300);
       });
     });
   </script>
